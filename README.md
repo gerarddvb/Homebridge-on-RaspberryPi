@@ -82,79 +82,116 @@ Command should return (4.3.2)
 
 ## Other Dependencies
 
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -     (NOT on ARMv6)
-sudo apt-get install -y nodejs
-sudo apt-get install libavahi-compat-libdnssd-dev
+After NodeJS we need some other dependencies, enter the following commands:
 
-Install Homebridge
-sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
-cd /usr/local/lib/node_modules/homebridge/
-sudo npm install --unsafe-perm bignum
-cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
-sudo node-gyp BUILDTYPE=Release rebuild
+> curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
-Install Plugins
-sudo npm install -g homebridge-http			https://github.com/rudders/homebridge-http
-sudo npm install -g homebridge-nest			https://github.com/kraigm/homebridge-nest
-sudo npm install -g homebridge-philipshue		https://github.com/thkl/homebridge-philipshue
-sudo npm install -g homebridge-harmonyhub	https://github.com/KraigM/homebridge-harmonyhub
-sudo npm Install -g homebridge-daylight		https://github.com/yungsters/homebridge-daylight
+> sudo apt-get install -y nodejs
+
+> sudo apt-get install libavahi-compat-libdnssd-dev
+
+# Install Homebridge
+
+Now install Homebridge with the following commands:
+
+> sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
+
+> cd /usr/local/lib/node_modules/homebridge/
+
+> sudo npm install --unsafe-perm bignum
+
+> cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
+
+> sudo node-gyp BUILDTYPE=Release rebuild
+
+# Install Plugins
+
+Use these commands to install the Homebridge plugins, setup of the plugins is nedeed follow the instructions of the plugin to setup the plugin
+
+> sudo npm install -g homebridge-http			https://github.com/rudders/homebridge-http
+
+> sudo npm install -g homebridge-nest			https://github.com/kraigm/homebridge-nest
+
+> sudo npm install -g homebridge-philipshue		https://github.com/thkl/homebridge-philipshue
+
+> sudo npm install -g homebridge-harmonyhub	https://github.com/KraigM/homebridge-harmonyhub
+
+> sudo npm Install -g homebridge-daylight		https://github.com/yungsters/homebridge-daylight
 
 # WebIOPi Setup
 
-Installation
+To use homebridge-http we will need to setup webiopi
 
 ——————————
 HEADLESS/ARMv6 ONLY
 sudo apt-get install rpi.gpio <MAYBE sudo apt-get install python-rpi.gpio>
 ——————————
 
-wget http://sourceforge.net/projects/webiopi/files/WebIOPi-0.7.1.tar.gz
-tar xvzf WebIOPi-0.7.1.tar.gz
-cd WebIOPi-0.7.1
-wget https://raw.githubusercontent.com/doublebind/raspi/master/webiopi-pi2bplus.patch
-patch -p1 -i webiopi-pi2bplus.patch
-sudo ./setup.sh
-sudo webiopi -d -c /etc/webiopi/config (Test, close after successful connection)
-sudo /etc/init.d/webiopi start
-sudo update-rc.d webiopi defaults
+Enter the following commands to setup webiopi:
 
-Copy files
-copy gpio1.py to /home/pi/  
-cd /home/pi
-wget <*GitHub/Dropbox link to gpio.py>
+> wget http://sourceforge.net/projects/webiopi/files/WebIOPi-0.7.1.tar.gz
 
-Setup GPIO
-sudo crontab -e
-Add: @reboot sudo python3 /home/pi/gpio1.py > /home/pi/webiopilog.txt
+> tar xvzf WebIOPi-0.7.1.tar.gz
 
+> cd WebIOPi-0.7.1
+
+> wget https://raw.githubusercontent.com/doublebind/raspi/master/webiopi-pi2bplus.patch
+
+> patch -p1 -i webiopi-pi2bplus.patch
+
+> sudo ./setup.sh
+
+> sudo webiopi -d -c /etc/webiopi/config (Test, close after successful connection)
+
+> sudo /etc/init.d/webiopi start
+
+> sudo update-rc.d webiopi defaults
+
+## Setup GPIO
+
+Enter the following commands to setup the GPIO for homebridge-http
+
+> cd /home/pi
+
+> wget <*GitHub/Dropbox link to gpio.py>
+
+> sudo crontab -e
+
+> Add: @reboot sudo python3 /home/pi/gpio1.py > /home/pi/webiopilog.txt
 
 # Setup systemctl
 
-Place homebridge under /etc/default/
-sudo mv /home/pi/Desktop/homebridge /etc/default/
+> Place homebridge under /etc/default/
+> sudo mv /home/pi/Desktop/homebridge /etc/default/
 
-Place homebridge.service under /etc/systemd/system/
-sudo mv /home/pi/Desktop/homebridge.service /etc/systemd/system/ 
+> Place homebridge.service under /etc/systemd/system/
 
-Create User
-useradd --system homebridge
+> sudo mv /home/pi/Desktop/homebridge.service /etc/systemd/system/ 
 
-Copy files
-sudo mkdir /var/homebridge
-sudo cp -r /home/pi/.homebridge/accessoiries/ /var/homebridge/
-sudo cp -r /home/pi/.homebridge/persist/ /var/homebridge/
-sudo cp /home/pi/.homebridge/config.json /var/homebridge/
-sudo chown -R homebridge:homebridge /var/homebridge
-sudo chmod 777 -R /var/homebridge
+> useradd --system homebridge
 
-Enable
-sudo systemctl daemon-reload
-sudo systemctl enable homebridge
-sudo systemctl start homebridge
+> sudo mkdir /var/homebridge
 
-Status
-sudo systemctl status -l homebridge -n 200
+> sudo cp -r /home/pi/.homebridge/accessoiries/ /var/homebridge/
+
+> sudo cp -r /home/pi/.homebridge/persist/ /var/homebridge/
+
+> sudo cp /home/pi/.homebridge/config.json /var/homebridge/
+
+> sudo chown -R homebridge:homebridge /var/homebridge
+
+> sudo chmod 777 -R /var/homebridge
+
+## Enable
+
+> sudo systemctl daemon-reload
+
+> sudo systemctl enable homebridge
+
+> sudo systemctl start homebridge
+
+## Status
+> sudo systemctl status -l homebridge -n 200
 
 # Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
