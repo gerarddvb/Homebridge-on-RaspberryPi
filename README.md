@@ -4,7 +4,7 @@ Example of Homebridge on RaspberryPi 3 (This should also work on Pi 2 and model 
 
 This is a work-in-progress, in this setup we will use the Pixel image and desktop. This will change soon, I am working on a CLI only version off this setup
 
-READ: https://github.com/nfarina/homebridge
+## READ: https://github.com/nfarina/homebridge
 
 This example gives the config of 4 accessories/devices; 
 - Philips Hue (1st gen Bridge)
@@ -13,7 +13,7 @@ This example gives the config of 4 accessories/devices;
 - Raspberry Pi 3 with GPIO input and output
 - GPS based sunset trigger(s) with offset
 
-Setup Raspberry
+# Setup Raspberry
 
 APT
 sudo apt-get update
@@ -26,7 +26,7 @@ hdmi_force_hotplug=1
 hdmi_group=2
 hdmi_mode=30
 
-Install Homebridge
+# Install Homebridge
 
 https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
 
@@ -57,7 +57,7 @@ sudo npm install -g homebridge-philipshue		https://github.com/thkl/homebridge-ph
 sudo npm install -g homebridge-harmonyhub	https://github.com/KraigM/homebridge-harmonyhub
 sudo npm Install -g homebridge-daylight		https://github.com/yungsters/homebridge-daylight
 
-WebIOPi Setup
+# WebIOPi Setup
 
 Installation
 
@@ -86,7 +86,7 @@ sudo crontab -e
 Add: @reboot sudo python3 /home/pi/gpio1.py > /home/pi/webiopilog.txt
 
 
-Setup systemctl
+# Setup systemctl
 
 Place homebridge under /etc/default/
 sudo mv /home/pi/Desktop/homebridge /etc/default/
@@ -113,7 +113,7 @@ sudo systemctl start homebridge
 Status
 sudo systemctl status -l homebridge -n 200
 
-Notes
+# Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
 * Raspberry Pi inputs crashes Homebridge on my setup if you set the config.json to "switchHandling": "realtime”, if you don’t need inputs/state info you should set "switchHandling": “yes”
 * Homebridge Harmony crashes often
