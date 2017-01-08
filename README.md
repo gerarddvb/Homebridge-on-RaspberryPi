@@ -2,6 +2,8 @@
 
 Example of Homebridge on RaspberryPi 3 (This should also work on Pi 2 and model B+, models that don’t have 40-pin GPIO should not install the webiopi patch)
 
+## BLABLABLA here
+
 This is a work-in-progress, in this setup we will use the Pixel image and desktop. This will change soon, I am working on a CLI only version off this setup
 
 ## READ: https://github.com/nfarina/homebridge
@@ -15,10 +17,25 @@ This example gives the config of 4 accessories/devices;
 
 # Setup Raspberry
 
-APT
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install netatalk
+First we need to setup the Raspberry Pi, open terminal and enter the following command:
+
+> sudo raspi-cofig
+
+In the config tool enable SSH and Autologin
+
+After that open a new terminal window and enter the following command:
+
+> sudo reboot
+
+# Setup APT
+
+
+
+> sudo apt-get update
+
+> sudo apt-get upgrade
+
+> sudo apt-get install netatalk
 
 Edit Boot configuration file (Pixel/RealVNC Only)
 sudo nano /boot/config.txt
