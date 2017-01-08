@@ -58,17 +58,30 @@ Uncheck (-#) the following lines:
 
 # Install Homebridge
 
-READ: https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
+### READ: https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
 
-NodeJS
-wget https://nodejs.org/dist/v4.3.2/node-v4.3.2-linux-armv6l.tar.gz 
-tar -xvf node-v4.3.2-linux-armv6l.tar.gz 
-cd node-v4.3.2-linux-armv6l
-sudo cp -R * /usr/local/
+## NodeJS
 
-node -v
+NodeJS is needed to run Homebridge on Raspberry Pi, run the following commands to install NodeJS:
 
-Other Dependencies
+> wget https://nodejs.org/dist/v4.3.2/node-v4.3.2-linux-armv6l.tar.gz 
+
+> tar -xvf node-v4.3.2-linux-armv6l.tar.gz 
+
+> cd node-v4.3.2-linux-armv6l
+
+> sudo cp -R * /usr/local/
+
+## Test NodeJS
+
+To test the installation of NodeJS enter the following command:
+
+> node -v
+
+Command should return (4.3.2)
+
+## Other Dependencies
+
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -     (NOT on ARMv6)
 sudo apt-get install -y nodejs
 sudo apt-get install libavahi-compat-libdnssd-dev
