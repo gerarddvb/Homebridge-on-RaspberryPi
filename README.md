@@ -15,6 +15,9 @@ This example gives the config of 4 accessories/devices;
 - Raspberry Pi 3 with GPIO input and output
 - GPS based sunset trigger(s) with offset
 
+
+
+
 # Setup Raspberry
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
@@ -29,7 +32,7 @@ After that open a new terminal window and enter the following command:
 
 # Setup APT
 
-
+Now it is time to setup APT, enter the following commands:
 
 > sudo apt-get update
 
@@ -37,15 +40,25 @@ After that open a new terminal window and enter the following command:
 
 > sudo apt-get install netatalk
 
-Edit Boot configuration file (Pixel/RealVNC Only)
-sudo nano /boot/config.txt
-hdmi_force_hotplug=1
-hdmi_group=2
-hdmi_mode=30
+# Edit Boot configuration file (Pixel/RealVNC Only) OBSOLETE
+
+Pixel uses RealVNC, if you want to use VNC you should enter the following command:
+
+> sudo nano /boot/config.txt
+
+Uncheck (-#) the following lines:
+
+> hdmi_force_hotplug=1
+
+> hdmi_group=2
+
+> hdmi_mode=30
+
+
 
 # Install Homebridge
 
-https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
+READ: https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
 
 NodeJS
 wget https://nodejs.org/dist/v4.3.2/node-v4.3.2-linux-armv6l.tar.gz 
