@@ -15,8 +15,8 @@
                     "on_url":      "http://localhost:8000/GPIO/4/value/1",
                     "off_url":     "http://localhost:8000/GPIO/4/value/0",
                     "status_url":  "http://localhost:8000/GPIO/4/value",
-                    "username" : "webiopi",
-                    "password" : "raspberry"
+                    "username" : "xxxxxxx",
+                    "password" : "xxxxxxx"
                     },
                     {
                     "accessory": "OpenweathermapTemperature",
