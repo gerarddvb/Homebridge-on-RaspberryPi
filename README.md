@@ -18,7 +18,9 @@ This example gives the config of 7 accessories/devices;
 - Delayed off switches
 
 
-# Setup Raspberry
+# Setup Raspberry Pi
+
+## System setup
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
 
@@ -29,6 +31,16 @@ In the config tool enable SSH, VNC and Autologin
 After that open a new terminal window and enter the following command:
 
 > sudo reboot
+
+## Download setup files
+
+Download the setup files, enter the following commands:
+
+> cd /home/pi/Downloads
+
+> sudo wget <*GitHub/Dropbox link to Setup-1.0.0.zip>
+
+> unzip Setup-1.0.0.zip -d /home/pi/HomeKit/
 
 # Setup APT
 
