@@ -1,10 +1,10 @@
 # Homebridge on RaspberryPi
 
-Example of Homebridge on RaspberryPi 3 (This should also work on Pi 2 and model B+, models that don’t have 40-pin GPIO should not install the webiopi patch)
 
-## BLABLABLA here
+# NOT USEABLE!!!!
 
-This is a work-in-progress, in this setup we will use the Pixel image and desktop. This will change soon, I am working on a CLI only version off this setup
+
+Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
@@ -13,9 +13,9 @@ This example gives the config of 4 accessories/devices;
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
 - Raspberry Pi 3 with GPIO input and output
-- GPS based sunset trigger(s) with offset
-
-
+- GPS based sunset triggers
+- GPS based temperature sensor
+- Delayed off switches
 
 
 # Setup Raspberry
@@ -24,7 +24,7 @@ First we need to setup the Raspberry Pi, open terminal and enter the following c
 
 > sudo raspi-cofig
 
-In the config tool enable SSH and Autologin
+In the config tool enable SSH, VNC and Autologin
 
 After that open a new terminal window and enter the following command:
 
