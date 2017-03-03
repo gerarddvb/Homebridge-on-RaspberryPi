@@ -1,4 +1,4 @@
-# Homebridge on RaspberryPi
+# Homebridge on Raspberry Pi 3
 
 
 # NOT USEABLE!!!!
