@@ -1,0 +1,94 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:39",
+        "port": 51826,
+        "pin": "987-65-488"
+    },
+    
+    "accessories": [
+                    {
+                    "accessory": "Http",
+                    "name": "Afzuiging",
+                    "switchHandling": "yes",
+                    "http_method": "POST",
+                    "on_url":      "http://localhost:8000/GPIO/4/value/1",
+                    "off_url":     "http://localhost:8000/GPIO/4/value/0",
+                    "status_url":  "http://localhost:8000/GPIO/4/value",
+                    "username" : "webiopi",
+                    "password" : "raspberry"
+                    },
+                    {
+                    "accessory": "OpenweathermapTemperature",
+                    "name": "Buitentemperatuur",
+                    "url": "http://api.openweathermap.org/data/2.5/weather?q=Beverwijk&APPID=37e2b8169d1ce4f94b7a88df02088e7f"
+                    },
+                    {
+                    "accessory": "Daylight",
+                    "location": {
+                    "lat": 52.48316,
+                    "lng": 12.65839
+                    },
+                    "name": "Sensor 1"
+                    },
+                    {
+                    "accessory": "Daylight",
+                    "location": {
+                    "lat": 52.48316,
+                    "lng": 9.65839
+                    },
+                    "name": "Sensor 2"
+                    },
+                    {
+                    "accessory": "Daylight",
+                    "location": {
+                    "lat": 52.48316,
+                    "lng": 4.65839
+                    },
+                    "name": "Sensor 3"
+                    },
+                    {
+                    "accessory": "Daylight",
+                    "location": {
+                    "lat": 52.48316,
+                    "lng": 0.65839
+                    },
+                    "name": "Sensor 4"
+                    },
+                    {
+                    "accessory": "DelaySwitch",
+                    "name": "Set Keuken",
+                    "delay": 5000
+                    },
+                    {
+                    "accessory": "DelaySwitch",
+                    "name": "Set Fan",
+                    "delay": 5000
+                    }
+                    ],
+
+    "platforms": [
+                  {
+                  "platform": "PhilipsHue",
+                  "name": "Philips Hue",
+                  "ip_address": "10.0.1.8",
+                  "username": "newdeveloper",
+                  "excludephilips": false
+                  },
+                  {
+                  "platform": "HarmonyHub",
+                  "name": "Woonkamer"
+                  },
+                  {
+                  "platform": "Nest",
+                  "token" : "c.EiO2UPNs6OnvSquI7Cs7Z2KggzNXHt1MrPp3ec5AmyFWjIX7UogJg9XagaPeIppwZ6egdNFKP6lM3Oym4GzrAx5sNfH2zJSke4NVE29s1ep7pEgi8KZMRHY5vTHGXk8Ffh0SwFpmH3W2iZrg",
+                  "clientId": "f54ff7ff-721c-44b8-8fe3-3169a77c49a3",
+                  "clientSecret": "VyLDgI7JJIJDojEQXctsEzDI1",
+                  "code": "YLEKL2XU",
+                  "username" : "xxxxxxxxx",
+                  "password" : "xxxxxxxxxx"
+                  }
+
+                    ]
+
+}
