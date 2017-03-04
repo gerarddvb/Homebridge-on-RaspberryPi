@@ -101,7 +101,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo apt-get install libavahi-compat-libdnssd-dev
 ```
-# Install Homebridge
+## Setup Homebridge
 
 ```
 sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
@@ -111,7 +111,7 @@ cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
 sudo node-gyp BUILDTYPE=Release rebuild
 ```
 
-# Install Plugins
+## Install Plugins
 
 Use these commands to install the Homebridge plugins, setup of the plugins is nedeed follow the instructions of the plugin to setup the plugin
 
