@@ -40,7 +40,7 @@ Download the setup files, enter the following command:
   git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
   ```
   
-# Setup APT
+## Setup APT
 
 Now it is time to setup APT, enter the following commands:
 
@@ -49,7 +49,7 @@ Now it is time to setup APT, enter the following commands:
   sudo apt-get upgrade
   ```
 
-# Edit Boot configuration file
+## Edit Boot configuration file
 
 Pixel uses RealVNC, if you want to use VNC you should enter the following command:
 
