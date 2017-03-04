@@ -16,13 +16,13 @@ This example gives the config of 7 accessories/devices;
 
 # Setup Raspberry Pi
 
-## System setup
+
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
 
-  ```
+```
 sudo raspi-cofig
-  ```
+```
 
 In the config tool enable SSH, VNC and Autologin
 
@@ -32,24 +32,18 @@ After that open a new terminal window and enter the following command:
 sudo reboot
   ```
 
-## Download setup files
-
 Download the setup files, enter the following command:
   
-  ```
-  git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
-  ```
-  
-## Setup APT
+```
+git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
+```
 
 Now it is time to setup APT, enter the following commands:
 
-  ```
-  sudo apt-get update
-  sudo apt-get upgrade
-  ```
-
-## Edit Boot configuration file
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 
 Pixel uses RealVNC, if you want to use VNC you should enter the following command:
 
@@ -73,8 +67,6 @@ dtparam=watchdog=on
 
 # Install Homebridge
 
-## NodeJS
-
 NodeJS is needed to run Homebridge on Raspberry Pi, run the following commands to install NodeJS:
 
 ```
@@ -84,8 +76,6 @@ cd node-v4.3.2-linux-armv6l
 sudo cp -R * /usr/local/
 ```
 
-## Test NodeJS
-
 To test the installation of NodeJS enter the following command:
 ```
 node -v
@@ -93,15 +83,14 @@ node -v
 
 Command should return v4.3.2
 
-## Other Dependencies
-
 After NodeJS we need some other dependencies, enter the following commands:
 ```
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
 sudo apt-get install -y nodejs
 sudo apt-get install libavahi-compat-libdnssd-dev
 ```
-## Setup Homebridge
+
+Use these commands to setup Homebridge
 
 ```
 sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
@@ -110,8 +99,6 @@ sudo npm install --unsafe-perm bignum
 cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
 sudo node-gyp BUILDTYPE=Release rebuild
 ```
-
-## Install Plugins
 
 Use these commands to install the Homebridge plugins, setup of the plugins is nedeed follow the instructions of the plugin to setup the plugin
 
@@ -125,11 +112,25 @@ sudo npm install -g homebridge-openweathermap-temperature
 sudo npm install -g homebridge-delay-switch
 ```
 
+Start Homebridge
+
+```
+homebridge
+```
+
+Close after succesful test
+
+Now its time to copy the config.json
+```
+cd /home/pi/.homebridge/
+sudo wget -N <YOUR config.json file>
+```
+
 # WebIOPi
 
 To use homebridge-http with GPIO we will need to setup webiopi
 
-## Setup GPIO
+Setup GPIO
 ```
 sudo crontab -e
 ```
@@ -139,7 +140,6 @@ Add the following line at the end:
 @reboot sudo python3 /home/pi/HomeKit/gpio.py > /home/pi/HomeKit/webiopilog.txt
 ```
 
-## Install WebIOPI
 Enter the following commands to install webiopi:
 ```
 cd /home/pi/HomeKit/
@@ -148,7 +148,7 @@ cd WebIOPi-0.7.1
 sudo ./setup.sh										                (Access over internet = no)
 sudo webiopi -d -c /etc/webiopi/config 						(Test, close after successful connection)
 ```
-## Start WebIOPi
+Start WebIOPi
 ```
 sudo update-rc.d webiopi defaults
 sudo /etc/init.d/webiopi start
@@ -158,12 +158,12 @@ sudo /etc/init.d/webiopi start
 
 After all the accessories/devices are configured and tested, we will make run at boot
 
-## Create User
+Create User
 ```
 useradd --system homebridge
 ```
 
-## Copy files
+Copy files
 ```
 sudo mv /home/pi/HomeKit/homebridge /etc/default/
 sudo mv /home/pi/HomeKit/homebridge.service /etc/systemd/system/ 
@@ -175,7 +175,7 @@ sudo chown -R homebridge:homebridge /var/homebridge
 sudo chmod 777 -R /var/homebridge
 ```
 
-## Enable
+Enable
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable homebridge
@@ -183,7 +183,7 @@ sudo systemctl start homebridge
 sudo reboot
 ```
 
-## Status
+# Status
 ```
 sudo systemctl status -l homebridge -n 200
 ```
