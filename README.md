@@ -32,7 +32,9 @@ In the config tool enable SSH, VNC and Autologin
 
 After that open a new terminal window and enter the following command:
 
-> sudo reboot
+  ```
+  sudo reboot
+  ```
 
 ## Download setup files
 
