@@ -1,9 +1,5 @@
 # Homebridge on Raspberry Pi 3
 
-
-# NOT USEABLE!!!!
-
-
 Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
@@ -25,7 +21,7 @@ This example gives the config of 7 accessories/devices;
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
 
   ```
-  sudo raspi-cofig
+sudo raspi-cofig
   ```
 
 In the config tool enable SSH, VNC and Autologin
@@ -33,7 +29,7 @@ In the config tool enable SSH, VNC and Autologin
 After that open a new terminal window and enter the following command:
 
   ```
-  sudo reboot
+sudo reboot
   ```
 
 ## Download setup files
@@ -158,7 +154,9 @@ sudo update-rc.d webiopi defaults
 sudo /etc/init.d/webiopi start
 ```
 
-# Setup systemctl
+# Setup systemd
+
+After all the accessories/devices are configured and tested, we will make run at boot
 
 ## Create User
 ```
@@ -186,7 +184,9 @@ sudo reboot
 ```
 
 ## Status
-> sudo systemctl status -l homebridge -n 200
+```
+sudo systemctl status -l homebridge -n 200
+```
 
 # Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
@@ -195,16 +195,16 @@ sudo reboot
 * Install packages manually with: sudo npm install -g FOLDERNAME
 
 # Sources
-https://github.com/nfarina/homebridge
-https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
-https://gist.github.com/johannrichard/0ad0de1feb6adb9eb61a
-https://github.com/rudders/homebridge-http
-https://github.com/kraigm/homebridge-nest
-https://github.com/thkl/homebridge-philipshue
-https://github.com/KraigM/homebridge-harmonyhub
-https://github.com/sholzmayer/homebridge-openweathermap-temperature
-https://github.com/nitaybz/homebridge-delay-switch
-https://github.com/yungsters/homebridge-daylight
-http://webiopi.trouch.com/INSTALL.html
-http://forkgeeks.com/enabling-watchdog-on-raspberry-pi/
+> https://github.com/nfarina/homebridge
+> https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
+> https://gist.github.com/johannrichard/0ad0de1feb6adb9eb61a
+> https://github.com/rudders/homebridge-http
+> https://github.com/kraigm/homebridge-nest
+> https://github.com/thkl/homebridge-philipshue
+> https://github.com/KraigM/homebridge-harmonyhub
+> https://github.com/sholzmayer/homebridge-openweathermap-temperature
+> https://github.com/nitaybz/homebridge-delay-switch
+> https://github.com/yungsters/homebridge-daylight
+> http://webiopi.trouch.com/INSTALL.html
+> http://forkgeeks.com/enabling-watchdog-on-raspberry-pi/
 
