@@ -38,43 +38,45 @@ After that open a new terminal window and enter the following command:
 
 ## Download setup files
 
-Download the setup files, enter the following commands:
-
-> cd /home/pi/Downloads
-
-> sudo wget <*GitHub/Dropbox link to Setup-1.0.0.zip>
-
-> unzip Setup-1.0.0.zip -d /home/pi/HomeKit/
-
+Download the setup files, enter the following command:
+  
+  ```
+  git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
+  ```
+  
 # Setup APT
 
 Now it is time to setup APT, enter the following commands:
 
-> sudo apt-get update
+  ```
+  sudo apt-get update
 
-> sudo apt-get upgrade
+  sudo apt-get upgrade
+  ```
 
-> sudo apt-get install netatalk
-
-# Edit Boot configuration file (Pixel/RealVNC Only) OBSOLETE
+# Edit Boot configuration file
 
 Pixel uses RealVNC, if you want to use VNC you should enter the following command:
 
-> sudo nano /boot/config.txt
-
+  ```
+  sudo nano /boot/config.txt
+  ```
+  
 Uncheck (-#) the following lines:
 
-> hdmi_force_hotplug=1
+```
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=30
+```
 
-> hdmi_group=2
+Add the following line:
 
-> hdmi_mode=30
-
-
+```
+dtparam=watchdog=on
+```
 
 # Install Homebridge
-
-### READ: https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
 
 ## NodeJS
 
