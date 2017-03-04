@@ -24,7 +24,9 @@ This example gives the config of 7 accessories/devices;
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
 
-> sudo raspi-cofig
+'''sh
+sudo raspi-cofig
+'''
 
 In the config tool enable SSH, VNC and Autologin
 
