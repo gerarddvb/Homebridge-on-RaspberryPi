@@ -4,7 +4,7 @@ Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
-This example gives the config of 7 accessories/devices; 
+This example gives the configuration of 7 accessories/devices; 
 - Philips Hue (1st gen Bridge)
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
@@ -35,13 +35,9 @@ First we need to setup the Raspberry Pi, open terminal and enter the following c
 sudo raspi-config
 ```
 
-In the config tool enable SSH, VNC and Autologin
+In the configuration tool enable SSH, VNC, Autologin and change your password.
 
-After that open a new terminal window and enter the following command:
 
-```
-sudo reboot
-```
 
 Now download the setup files, enter the following command:
   
@@ -74,6 +70,11 @@ Add the following line:
 
 ```
 dtparam=watchdog=on
+```
+
+After these modifications it is time to reboot, enter the following command to reboot:
+```
+sudo reboot
 ```
 
 # Install Homebridge
