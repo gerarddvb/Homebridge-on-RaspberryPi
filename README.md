@@ -138,16 +138,13 @@ Add the following line at the end:
 @reboot sudo python3 /home/pi/HomeKit/gpio.py > /home/pi/HomeKit/webiopilog.txt
 ```
 
-Enter the following commands to install webiopi:
+Enter the following commands to setup webiopi:
 ```
 cd /home/pi/HomeKit/
 sudo tar xvzf WebIOPi-0.7.1PATCHED.tar.gz
 cd WebIOPi-0.7.1
-sudo ./setup.sh										                (Access over internet = no)
+sudo ./setup.sh										              (Access over internet = no)
 sudo webiopi -d -c /etc/webiopi/config 					  	(Test, close after successful connection)
-```
-Start WebIOPi
-```
 sudo update-rc.d webiopi defaults
 sudo /etc/init.d/webiopi start
 ```
