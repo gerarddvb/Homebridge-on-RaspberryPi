@@ -22,7 +22,7 @@ Things I used in this setup;
 - AppleTV 4 (For remote access)
 - Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
-![](http://i.imgur.com/sTtJVN8.jpg)
+![](http://i.imgur.com/sTtJVN8.jpg =250x250)
 
 # Setup Raspberry Pi
 
