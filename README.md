@@ -23,9 +23,9 @@ Things I used in this setup;
 - Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
 
-<img src="http://i.imgur.com/QwuybYD.png" alt="alt text" width="707" height="387">
+<img src="http://i.imgur.com/QwuybYD.png" width="707" height="387">
 
-<img src="http://i.imgur.com/5gXy6WA.jpg" alt="alt text" width="168" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" alt="alt text" width="400" height="300">
+<img src="http://i.imgur.com/5gXy6WA.jpg" width="168" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
 
 # Setup Raspberry Pi
 
