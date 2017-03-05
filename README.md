@@ -25,7 +25,7 @@ Things I used in this setup;
 
 <img src="http://i.imgur.com/QwuybYD.png" width="707" height="387">
 
-<img src="http://i.imgur.com/5gXy6WA.jpg" width="168" height="300"> <img src="http://i.imgur.com/eGamtdA.jpg" width="168" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
+<img src="http://i.imgur.com/5gXy6WA.jpg" width="168" height="300"> <img src="http://i.imgur.com/eGamtdA.jpg" width="168" height="300"> <img src="http://i.imgur.com/m8NJ0R9.png" width="168" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
 
 # Setup Raspberry Pi
 
