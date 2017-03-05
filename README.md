@@ -196,15 +196,26 @@ sudo systemctl status -l homebridge -n 200
 
 # Sources
 > https://github.com/nfarina/homebridge
+
 > https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
+
 > https://gist.github.com/johannrichard/0ad0de1feb6adb9eb61a
+
 > https://github.com/rudders/homebridge-http
+
 > https://github.com/kraigm/homebridge-nest
+
 > https://github.com/thkl/homebridge-philipshue
+
 > https://github.com/KraigM/homebridge-harmonyhub
+
 > https://github.com/sholzmayer/homebridge-openweathermap-temperature
+
 > https://github.com/nitaybz/homebridge-delay-switch
+
 > https://github.com/yungsters/homebridge-daylight
+
 > http://webiopi.trouch.com/INSTALL.html
+
 > http://forkgeeks.com/enabling-watchdog-on-raspberry-pi/
 
