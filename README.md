@@ -22,6 +22,8 @@ Things I used in this setup;
 - AppleTV 4 (For remote access)
 - Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
+![](http://imgur.com/a/GVYoP)
+
 # Setup Raspberry Pi
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
