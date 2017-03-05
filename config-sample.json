@@ -3,7 +3,7 @@
         "name": "Homebridge",
         "username": "CC:22:3D:E3:CE:39",
         "port": 51826,
-        "pin": "987-65-488"
+        "pin": "xxxxxxx"
     },
     
     "accessories": [
@@ -72,7 +72,7 @@
                   "platform": "PhilipsHue",
                   "name": "Philips Hue",
                   "ip_address": "10.0.1.8",
-                  "username": "newdeveloper",
+                  "username": "xxxxxxx",
                   "excludephilips": false
                   },
                   {
