@@ -22,7 +22,7 @@ Things I used in this setup;
 - AppleTV 4 (For remote access)
 - Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
-<img src="http://i.imgur.com/sTtJVN8.jpg" alt="alt text" width="400" height="300">
+<img src="http://i.imgur.com/5gXy6WA.jpg" alt="alt text" width="250" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" alt="alt text" width="400" height="300">
 
 # Setup Raspberry Pi
 
