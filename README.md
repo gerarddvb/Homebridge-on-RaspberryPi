@@ -21,18 +21,18 @@ This example gives the config of 7 accessories/devices;
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
 
 ```
-sudo raspi-cofig
+sudo raspi-config
 ```
 
 In the config tool enable SSH, VNC and Autologin
 
 After that open a new terminal window and enter the following command:
 
-  ```
+```
 sudo reboot
-  ```
+```
 
-Download the setup files, enter the following command:
+Now download the setup files, enter the following command:
   
 ```
 git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
@@ -146,7 +146,7 @@ cd /home/pi/HomeKit/
 sudo tar xvzf WebIOPi-0.7.1PATCHED.tar.gz
 cd WebIOPi-0.7.1
 sudo ./setup.sh										                (Access over internet = no)
-sudo webiopi -d -c /etc/webiopi/config 						(Test, close after successful connection)
+sudo webiopi -d -c /etc/webiopi/config 					  	(Test, close after successful connection)
 ```
 Start WebIOPi
 ```
