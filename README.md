@@ -13,10 +13,16 @@ This example gives the config of 7 accessories/devices;
 - GPS based temperature sensor
 - Delayed off switches
 
+Things I used in this setup;
+- Raspberry Pi 3 Model B v1.2
+- Keyes Relayboard (2 relays)
+- Phoenix Contact RPI-BC DIN rail housing
+- iPhone/iPad on iOS 10
+- PC/Mac (For SSH)
+- AppleTV 4 (For remote access)
+- Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
 # Setup Raspberry Pi
-
-
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
 
