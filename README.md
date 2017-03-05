@@ -157,8 +157,6 @@ Make sure everything is tested thoroughly, because editing the config.json isn't
 Editing will probably break your Raspberry setup, making you start over.
 
 The config.json used by the deamon will be located at /var/homebridge/
-
-Create User
 ```
 useradd --system homebridge
 sudo mv /home/pi/HomeKit/homebridge /etc/default/
