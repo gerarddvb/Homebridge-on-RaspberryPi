@@ -154,9 +154,12 @@ sudo update-rc.d webiopi defaults
 sudo /etc/init.d/webiopi start
 ```
 
-# Setup systemd
+# Setup systemd deamon
 
-After all the accessories/devices are configured and tested, we will make run at boot
+After all the accessories/devices are configured and tested, we will make it run at boot.
+Make sure everything is tested thoroughly, because editing the config.json isn't easy after this point.
+Editing will probably break your Raspberry setup, making you start over.
+The config.json used by the deamon will be located at /var/homebridge/
 
 Create User
 ```
@@ -184,6 +187,8 @@ sudo reboot
 ```
 
 # Status
+After reboot you can check the state of homebridge by entering the following command
+
 ```
 sudo systemctl status -l homebridge -n 200
 ```
