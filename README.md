@@ -151,18 +151,16 @@ sudo /etc/init.d/webiopi start
 
 # Setup systemd deamon
 
-After all the accessories/devices are configured and tested, we will make it run at boot.
+After all the accessories/devices are configured and tested, it is time to make it run at boot.
+
 Make sure everything is tested thoroughly, because editing the config.json isn't easy after this point.
 Editing will probably break your Raspberry setup, making you start over.
+
 The config.json used by the deamon will be located at /var/homebridge/
 
 Create User
 ```
 useradd --system homebridge
-```
-
-Copy files
-```
 sudo mv /home/pi/HomeKit/homebridge /etc/default/
 sudo mv /home/pi/HomeKit/homebridge.service /etc/systemd/system/ 
 sudo mkdir /var/homebridge
@@ -171,10 +169,6 @@ sudo cp -r /home/pi/.homebridge/persist/ /var/homebridge/
 sudo cp /home/pi/.homebridge/config.json /var/homebridge/
 sudo chown -R homebridge:homebridge /var/homebridge
 sudo chmod 777 -R /var/homebridge
-```
-
-Enable
-```
 sudo systemctl daemon-reload
 sudo systemctl enable homebridge
 sudo systemctl start homebridge
