@@ -78,7 +78,7 @@ dtparam=watchdog=on
 
 # Install Homebridge
 
-Use these commands to setup dependencies:
+Use these commands to install Homebridge:
 
 ```
 cd /home/pi/HomeKit/
@@ -88,11 +88,6 @@ sudo cp -R * /usr/local/
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
 sudo apt-get install -y nodejs
 sudo apt-get install libavahi-compat-libdnssd-dev
-```
-
-Use these commands to setup Homebridge:
-
-```
 sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
 cd /usr/local/lib/node_modules/homebridge/
 sudo npm install --unsafe-perm bignum
@@ -100,7 +95,10 @@ cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
 sudo node-gyp BUILDTYPE=Release rebuild
 ```
 
-Use these commands to install the Homebridge plugins, setup of the plugins is nedeed follow the instructions of the plugin to setup the plugin:
+Use these commands to install the Homebridge plugins.
+
+Initial setup of various plugins is nedeed.
+Follow the instructions on the GitHub link to the plugin below.
 
 ```
 sudo npm install -g homebridge-http
@@ -112,7 +110,7 @@ sudo npm install -g homebridge-openweathermap-temperature
 sudo npm install -g homebridge-delay-switch
 ```
 
-Start Homebridge
+Test Homebridge
 
 ```
 homebridge
@@ -128,7 +126,7 @@ sudo wget -N <YOUR config.json file>
 
 # WebIOPi
 
-To use homebridge-http with GPIO we will need to setup webiopi
+To use homebridge-http with GPIO we will need to setup webiopi, skip if you don't wont to use GPIO
 
 Setup GPIO
 ```
