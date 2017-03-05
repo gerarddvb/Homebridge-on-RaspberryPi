@@ -187,17 +187,20 @@ sudo reboot
 ```
 
 # Status
-After reboot you can check the state of homebridge by entering the following command
+After reboot you can check the state of homebridge by entering the following command:
 
 ```
 sudo systemctl status -l homebridge -n 200
 ```
+
+This will output the last 200 lines, change that number to get more/less info
 
 # Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
 * Raspberry Pi inputs crashes Homebridge on my setup if you set the config.json to "switchHandling": "realtime”, if you don’t need inputs/state info you should set "switchHandling": “yes”
 * Homebridge Harmony crashes often
 * Install packages manually with: sudo npm install -g FOLDERNAME
+* I am working on the writeup for a CPU watchdog, homebridge-harmony sometimes freezes the system. With watchdog enabled it will auto-reboot after 15 seconds after crash. This is looking quite promising on my setup.
 
 # Sources
 > https://github.com/nfarina/homebridge
