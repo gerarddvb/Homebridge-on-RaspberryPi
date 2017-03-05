@@ -78,30 +78,19 @@ dtparam=watchdog=on
 
 # Install Homebridge
 
-NodeJS is needed to run Homebridge on Raspberry Pi, run the following commands to install NodeJS:
+Use these commands to setup dependencies:
 
 ```
 cd /home/pi/HomeKit/
 sudo tar -xvf node-v4.3.2-linux-armv6l.tar.gz 
 cd node-v4.3.2-linux-armv6l
 sudo cp -R * /usr/local/
-```
-
-To test the installation of NodeJS enter the following command:
-```
-node -v
-```
-
-Command should return v4.3.2
-
-After NodeJS we need some other dependencies, enter the following commands:
-```
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
 sudo apt-get install -y nodejs
 sudo apt-get install libavahi-compat-libdnssd-dev
 ```
 
-Use these commands to setup Homebridge
+Use these commands to setup Homebridge:
 
 ```
 sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
@@ -111,7 +100,7 @@ cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
 sudo node-gyp BUILDTYPE=Release rebuild
 ```
 
-Use these commands to install the Homebridge plugins, setup of the plugins is nedeed follow the instructions of the plugin to setup the plugin
+Use these commands to install the Homebridge plugins, setup of the plugins is nedeed follow the instructions of the plugin to setup the plugin:
 
 ```
 sudo npm install -g homebridge-http
