@@ -1,9 +1,9 @@
 {
     "bridge": {
         "name": "Homebridge",
-        "username": "CC:22:3D:E3:CE:39",
+        "username": "CC:22:3D:E3:CD:48",
         "port": 51826,
-        "pin": "xxxxxxx"
+        "pin": "987-65-497"
     },
     
     "accessories": [
@@ -15,43 +15,43 @@
                     "on_url":      "http://localhost:8000/GPIO/4/value/1",
                     "off_url":     "http://localhost:8000/GPIO/4/value/0",
                     "status_url":  "http://localhost:8000/GPIO/4/value",
-                    "username" : "xxxxxxx",
-                    "password" : "xxxxxxx"
+                    "username" : "xxxxxxxx",
+                    "password" : "xxxxxxxxy"
                     },
                     {
                     "accessory": "OpenweathermapTemperature",
                     "name": "Buitentemperatuur",
-                    "url": "xxxxxxx"
+                    "url": "xxxxxxxx"
                     },
                     {
                     "accessory": "Daylight",
                     "location": {
-                    "lat": 52.48316,
-                    "lng": 12.65839
+                    "lat": 88.88888,
+                    "lng": 88.88888
                     },
                     "name": "Sensor 1"
                     },
                     {
                     "accessory": "Daylight",
                     "location": {
-                    "lat": 52.48316,
-                    "lng": 9.65839
+                    "lat": 88.88888,
+                    "lng": 88.88888
                     },
                     "name": "Sensor 2"
                     },
                     {
                     "accessory": "Daylight",
                     "location": {
-                    "lat": 52.48316,
-                    "lng": 4.65839
+                    "lat": 88.88888,
+                    "lng": 88.88888
                     },
                     "name": "Sensor 3"
                     },
                     {
                     "accessory": "Daylight",
                     "location": {
-                    "lat": 52.48316,
-                    "lng": 0.65839
+                    "lat": 88.88888,
+                    "lng": 88.88888
                     },
                     "name": "Sensor 4"
                     },
@@ -71,8 +71,8 @@
                   {
                   "platform": "PhilipsHue",
                   "name": "Philips Hue",
-                  "ip_address": "10.0.1.8",
-                  "username": "xxxxxxx",
+                  "ip_address": "xxxxxxxx",
+                  "username": "xxxxxxxx",
                   "excludephilips": false
                   },
                   {
