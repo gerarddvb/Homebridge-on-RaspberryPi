@@ -40,21 +40,6 @@ sudo raspi-config
 
 In the configuration tool enable SSH, VNC, Autologin and change your password.
 
-
-
-Now download the setup files, enter the following command:
-  
-```
-git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
-```
-
-Now it is time to setup APT, enter the following commands:
-
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
-
 Pixel uses RealVNC, if you want to use VNC you should enter the following command:
 
   ```
@@ -75,7 +60,21 @@ Add the following line:
 dtparam=watchdog=on
 ```
 
+Now it is time to setup APT, enter the following commands:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+Now download the setup files, enter the following command:
+  
+```
+git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
+```
+
 After these modifications it is time to reboot, enter the following command to reboot:
+
 ```
 sudo reboot
 ```
