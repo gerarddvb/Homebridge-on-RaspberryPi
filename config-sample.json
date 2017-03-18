@@ -21,7 +21,7 @@
                     {
                     "accessory": "OpenweathermapTemperature",
                     "name": "Buitentemperatuur",
-                    "url": "http://api.openweathermap.org/data/2.5/weather?q=Beverwijk&APPID=37e2b8169d1ce4f94b7a88df02088e7f"
+                    "url": "xxxxxxx"
                     },
                     {
                     "accessory": "Daylight",
