@@ -42,9 +42,9 @@ In the configuration tool enable SSH, VNC, Autologin and change your password.
 
 Pixel uses RealVNC, if you want to use VNC you should enter the following command:
 
-  ```
-  sudo nano /boot/config.txt
-  ```
+```
+sudo nano /boot/config.txt
+```
   
 Uncheck (-#) the following lines:
 
@@ -60,11 +60,12 @@ Add the following line:
 dtparam=watchdog=on
 ```
 
-Now it is time to setup APT, enter the following commands:
+Setup APT, enter the following commands:
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install watchdog
 ```
 
 Now download the setup files, enter the following command:
@@ -176,8 +177,29 @@ sudo systemctl start homebridge
 sudo reboot
 ```
 
+# Setup CPU Watchdog
+
+To enable the CPU watchdog enter the following commands, this will reboot the Raspberry Pi after a CPU inactivity of 14 seconds.
+
+```
+sudo mv /home/pi/HomeKit/watchdog.conf /etc/
+sudo mv /home/pi/HomeKit/watchdog.service /lib/systemd/system/
+sudo systemctl enable watchdog
+sudo systemctl start watchdog
+sudo reboot
+```
+
+Test watchdog
+
+To test the watchdog enter the following command, this will freeze your Rapsberry Pi, it should reboot after 14 seconds.
+
+```
+:(){ :|:& };:
+```
+
 # Status
-After reboot you can check the state of homebridge by entering the following command:
+
+You can check the state of homebridge by entering the following command:
 
 ```
 sudo systemctl status -l homebridge -n 200
@@ -185,12 +207,18 @@ sudo systemctl status -l homebridge -n 200
 
 This will output the last 200 lines, change that number to get more/less info
 
+You can check the status of WebIOPi by entering the following address in your browser:
+
+```
+http://RASPBERRYIPADDRESS:8000/
+```
+
 # Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
+* The system will restart after 14 seconds of inactivity
 * Raspberry Pi inputs crashes Homebridge on my setup if you set the config.json to "switchHandling": "realtime”, if you don’t need inputs/state info you should set "switchHandling": “yes”
-* Homebridge Harmony crashes often
+* Homebridge Harmony crashes often/is broken
 * Install packages manually with: sudo npm install -g FOLDERNAME
-* I am working on the writeup for a CPU watchdog, homebridge-harmony sometimes freezes the system. With watchdog enabled it will auto-reboot after 15 seconds after crash. This is looking quite promising on my setup.
 
 # Sources
 > https://github.com/nfarina/homebridge
