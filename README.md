@@ -29,6 +29,8 @@ Things I used in this setup;
 
 <img src="http://i.imgur.com/91m8Re2.jpg" width="400" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
 
+<img src="http://i.imgur.com/mbAzrhk.png" width="400" height="300"> 
+
 # Setup Raspberry Pi
 
 First we need to setup the Raspberry Pi, open terminal and enter the following command:
