@@ -22,6 +22,10 @@ Things I used in this setup;
 - AppleTV 4 (For remote access)
 - Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
+Other useful iOS Apps;
+- Prompt (SSH Terminal)
+- Eve (For editing Siri commands)
+
 <img src="http://i.imgur.com/QwuybYD.png" width="707" height="387">
 
 <img src="http://i.imgur.com/91m8Re2.jpg" width="400" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
