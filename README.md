@@ -20,9 +20,9 @@ Things I used in this setup;
 - iPhone/iPad on iOS 10
 - PC/Mac (For SSH)
 - AppleTV 4 (For remote access)
-- Home (in iOS AppStore, expensive but better then default iOS 10 app)
 
-Other useful iOS Apps;
+Useful iOS Apps;
+- Home (Expensive but better than default iOS 10 app)
 - Prompt (SSH Terminal)
 - Eve (For editing Siri commands)
 
@@ -151,8 +151,8 @@ Enter the following commands to setup webiopi:
 cd /home/pi/HomeKit/
 sudo tar xvzf WebIOPi-0.7.1PATCHED.tar.gz
 cd WebIOPi-0.7.1
-sudo ./setup.sh										              (Access over internet = no)
-sudo webiopi -d -c /etc/webiopi/config 					  	(Test, close after successful connection)
+sudo ./setup.sh										      (Access over internet = no)
+sudo webiopi -d -c /etc/webiopi/config  (Test, close after successful connection)
 sudo update-rc.d webiopi defaults
 sudo /etc/init.d/webiopi start
 ```
