@@ -15,7 +15,7 @@ Things I used in this setup;
 - Raspberry Pi 3 Model B v1.2
 - Keyes Relayboard (2 relays)
 - Phoenix Contact RPI-BC DIN rail housing
-- iPhone/iPad on iOS 10/11
+- iPhone/iPad on iOS 11
 - PC/Mac (For SSH)
 - AppleTV 4 (For remote access)
 
