@@ -4,7 +4,7 @@ Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
-This example gives the configuration of 4 accessories/devices; 
+This example gives the configuration of 5 accessories/devices; 
 - Philips Hue (1st gen)
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
@@ -240,3 +240,6 @@ http://RASPBERRYIPADDRESS:8000/
 
 > http://forkgeeks.com/enabling-watchdog-on-raspberry-pi/
 
+# DIN 81346 Electrical Drawing
+
+<img src="http://i.imgur.com/MJpKMJF.jpg" width="400" height="300"> <img src="http://i.imgur.com/qjb6moe.jpg" width="400" height="300">
