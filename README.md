@@ -5,7 +5,6 @@ Example of Homebridge on RaspberryPi 3
 ## READ: https://github.com/nfarina/homebridge
 
 This example gives the configuration of 4 accessories/devices; 
-- Philips Hue (1st gen Bridge)
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
 - Raspberry Pi GPIO
@@ -34,7 +33,7 @@ Useful iOS Apps;
 
 # Setup Raspberry Pi
 
-First we need to setup the Raspberry Pi, open terminal and enter the following command:
+First you need to setup the Raspberry Pi, open terminal and enter the following command:
 
 ```
 sudo raspi-config
@@ -130,7 +129,7 @@ sudo wget -N <YOUR config.json file>
 
 # WebIOPi
 
-To use homebridge-http with GPIO we will need to setup webiopi, skip if you don't want to use GPIO
+To use homebridge-http with GPIO you will need to setup webiopi, skip if you don't want to use GPIO
 
 Setup GPIO
 ```
