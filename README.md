@@ -30,7 +30,7 @@ Useful iOS Apps;
 
 <img src="http://i.imgur.com/c1DaqGE.jpg" width="400" height="300"> <img src="http://i.imgur.com/1XWtP4z.jpg" width="400" height="300"> 
 
-<img src="http://i.imgur.com/G1Lw3vY.jpg" width="177" height="315"> <img src="http://i.imgur.com/rQ3tzQb.jpg" width="177" height="315"> <img src="http://i.imgur.com/aQDJqoO.jpg" width="177" height="315"> <img src="http://i.imgur.com/fxwqZJI.png" width="177" height="315">
+<img src="http://i.imgur.com/G1Lw3vY.jpg" width="177" height="315"> <img src="http://i.imgur.com/rQ3tzQb.jpg" width="177" height="315"> <img src="http://i.imgur.com/aQDJqoO.jpg" width="177" height="315"> <img src="http://i.imgur.com/4sQMA1h.jpg" width="177" height="315">
 
 # Setup Raspberry Pi
 
