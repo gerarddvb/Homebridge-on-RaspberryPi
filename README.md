@@ -130,7 +130,7 @@ sudo wget -N <YOUR config.json file>
 
 # WebIOPi
 
-To use homebridge-http with GPIO we will need to setup webiopi, skip if you don't wont to use GPIO
+To use homebridge-http with GPIO we will need to setup webiopi, skip if you don't want to use GPIO
 
 Setup GPIO
 ```
@@ -217,7 +217,6 @@ http://RASPBERRYIPADDRESS:8000/
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
 * The system will restart after 14 seconds of inactivity
 * Raspberry Pi inputs crashes Homebridge on my setup if you set the config.json to "switchHandling": "realtime”, if you don’t need inputs/state info you should set "switchHandling": “yes”
-* Homebridge Harmony crashes often/is broken
 * Install packages manually with: sudo npm install -g FOLDERNAME
 
 # Sources
@@ -236,10 +235,6 @@ http://RASPBERRYIPADDRESS:8000/
 > https://github.com/KraigM/homebridge-harmonyhub
 
 > https://github.com/sholzmayer/homebridge-openweathermap-temperature
-
-> https://github.com/nitaybz/homebridge-delay-switch
-
-> https://github.com/yungsters/homebridge-daylight
 
 > http://webiopi.trouch.com/INSTALL.html
 
