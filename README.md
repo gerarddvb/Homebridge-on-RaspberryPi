@@ -4,20 +4,18 @@ Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
-This example gives the configuration of 7 accessories/devices; 
+This example gives the configuration of 5 accessories/devices; 
 - Philips Hue (1st gen Bridge)
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
-- Raspberry Pi 3 with GPIO input and output
-- GPS based sunset triggers
+- Raspberry Pi GPIO
 - GPS based temperature sensor
-- Delayed off switches
 
 Things I used in this setup;
 - Raspberry Pi 3 Model B v1.2
 - Keyes Relayboard (2 relays)
 - Phoenix Contact RPI-BC DIN rail housing
-- iPhone/iPad on iOS 10
+- iPhone/iPad on iOS 10/11
 - PC/Mac (For SSH)
 - AppleTV 4 (For remote access)
 
@@ -113,9 +111,7 @@ sudo npm install -g homebridge-http
 sudo npm install -g homebridge-nest
 sudo npm install -g homebridge-philipshue
 sudo npm install -g homebridge-harmonyhub
-sudo npm install -g homebridge-daylight
 sudo npm install -g homebridge-openweathermap-temperature
-sudo npm install -g homebridge-delay-switch
 ```
 
 Test Homebridge
