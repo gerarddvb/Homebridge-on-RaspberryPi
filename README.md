@@ -243,3 +243,5 @@ http://RASPBERRYIPADDRESS:8000/
 # DIN 81346 Electrical Drawing
 
 <img src="http://i.imgur.com/MJpKMJF.jpg" width="400" height="300"> <img src="http://i.imgur.com/qjb6moe.jpg" width="400" height="300">
+
+<img src="http://i.imgur.com/2p3Mwdm.jpg" width="400" height="300"> <img src="http://i.imgur.com/vX08V4T.jpg" width="400" height="300">
