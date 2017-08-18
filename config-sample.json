@@ -1,9 +1,12 @@
 {
     "bridge": {
         "name": "Homebridge",
-        "username": "CC:22:3D:E3:CD:48",
+        "username": "xxxxxxxx",
         "port": 51826,
-        "pin": "987-65-497"
+        "pin": "xxxxxxxx",
+        "manufacturer": "GerardDVB",
+        "model": "Raspberry Pi 3b",
+        "serialNumber": "xxxxxxxx"
     },
     
     "accessories": [
@@ -16,54 +19,12 @@
                     "off_url":     "http://localhost:8000/GPIO/4/value/0",
                     "status_url":  "http://localhost:8000/GPIO/4/value",
                     "username" : "xxxxxxxx",
-                    "password" : "xxxxxxxxy"
+                    "password" : "xxxxxxxx"
                     },
                     {
                     "accessory": "OpenweathermapTemperature",
                     "name": "Buitentemperatuur",
                     "url": "xxxxxxxx"
-                    },
-                    {
-                    "accessory": "Daylight",
-                    "location": {
-                    "lat": 88.88888,
-                    "lng": 88.88888
-                    },
-                    "name": "Sensor 1"
-                    },
-                    {
-                    "accessory": "Daylight",
-                    "location": {
-                    "lat": 88.88888,
-                    "lng": 88.88888
-                    },
-                    "name": "Sensor 2"
-                    },
-                    {
-                    "accessory": "Daylight",
-                    "location": {
-                    "lat": 88.88888,
-                    "lng": 88.88888
-                    },
-                    "name": "Sensor 3"
-                    },
-                    {
-                    "accessory": "Daylight",
-                    "location": {
-                    "lat": 88.88888,
-                    "lng": 88.88888
-                    },
-                    "name": "Sensor 4"
-                    },
-                    {
-                    "accessory": "DelaySwitch",
-                    "name": "Set Keuken",
-                    "delay": 5000
-                    },
-                    {
-                    "accessory": "DelaySwitch",
-                    "name": "Set Fan",
-                    "delay": 5000
                     }
                     ],
 
@@ -77,16 +38,16 @@
                   },
                   {
                   "platform": "HarmonyHub",
-                  "name": "Woonkamer"
+                  "name": "HarmonyWoonkamer"
                   },
                   {
                   "platform": "Nest",
-                  "token" : "xxxxxxxxx",
-                  "clientId": "xxxxxxxxx",
-                  "clientSecret": "xxxxxxxxx",
-                  "code": "xxxxxxxxx",
-                  "username" : "xxxxxxxxx",
-                  "password" : "xxxxxxxxxx"
+                  "token" : "xxxxxxxx",
+                  "clientId": "xxxxxxxx",
+                  "clientSecret": "xxxxxxxx",
+                  "code": "xxxxxxxx",
+                  "username" : "xxxxxxxx",
+                  "password" : "xxxxxxxx"
                   }
 
                     ]
