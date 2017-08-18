@@ -4,8 +4,7 @@ Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
-This example gives the configuration of 5 accessories/devices; 
-- Philips Hue (1st gen)
+This example gives the configuration of 4 accessories/devices; 
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
 - Raspberry Pi GPIO
@@ -24,7 +23,7 @@ Useful iOS Apps;
 - Prompt (SSH Terminal)
 - Eve (For editing Siri commands)
 
-<img src="http://i.imgur.com/QwuybYD.png" width="707" height="387">
+<img src="http://i.imgur.com/CnYg1Oa.png" width="811" height="359">
 
 <img src="http://i.imgur.com/F0AorQ8.jpg" width="400" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
 
@@ -109,7 +108,6 @@ Follow the instructions on the GitHub link to the plugin below.
 ```
 sudo npm install -g homebridge-http
 sudo npm install -g homebridge-nest
-sudo npm install -g homebridge-philipshue
 sudo npm install -g homebridge-harmonyhub
 sudo npm install -g homebridge-openweathermap-temperature
 ```
