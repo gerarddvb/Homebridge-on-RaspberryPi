@@ -4,8 +4,8 @@ Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
-This example gives the configuration of 5 accessories/devices; 
-- Philips Hue (1st gen Bridge)
+This example gives the configuration of 4 accessories/devices; 
+- ~~Philips Hue (1st gen Bridge)~~
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
 - Raspberry Pi GPIO
