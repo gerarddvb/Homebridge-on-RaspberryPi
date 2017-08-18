@@ -19,7 +19,7 @@ Things I used in this setup;
 - AppleTV 4 (For remote access)
 
 Useful iOS Apps;
-- Home (Expensive but better than default iOS 10 app)
+- Home (Expensive but better than default iOS app)
 - Prompt (SSH Terminal)
 - Eve (For editing Siri commands)
 
