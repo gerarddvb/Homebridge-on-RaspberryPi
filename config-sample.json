@@ -4,9 +4,6 @@
         "username": "xxxxxxxx",
         "port": 51826,
         "pin": "xxxxxxxx",
-        "manufacturer": "GerardDVB",
-        "model": "Raspberry Pi 3b",
-        "serialNumber": "xxxxxxxx"
     },
     
     "accessories": [
