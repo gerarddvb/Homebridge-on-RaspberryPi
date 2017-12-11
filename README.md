@@ -65,10 +65,13 @@ git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKi
 ```
 
 Open VNC Server settings from the system tray.
+
 Options > Security
 
+```
 Encryption = Prefer On
 Authentication = VNC Password
+```
 
 Apple Screen Sharing and iTeleport should be working now.
 
