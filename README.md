@@ -43,26 +43,13 @@ Useful Mac Apps;
 
 # Setup Raspberry Pi
 
-First you need to setup the Raspberry Pi, open terminal and enter the following command:
+Connect a display, mouse and keyboard to the Raspberry Pi, open terminal and enter the following command:
 
 ```
 sudo raspi-config
 ```
 
-In the configuration tool enable SSH, VNC, Autologin and change your password.
-
-Setup APT, enter the following commands:
-
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
-
-Now download the setup files, enter the following command:
-  
-```
-git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
-```
+In the configuration tool enable SSH, VNC, Autologin, Wifi and change your password.
 
 Open VNC Server settings from the system tray.
 
@@ -73,15 +60,22 @@ Encryption = Prefer On
 Authentication = VNC Password
 ```
 
-Apple Screen Sharing and iTeleport should be working now.
-
-After these modifications it is time to reboot, enter the following command to reboot:
-
+Download the setup files, enter the following command:
+  
 ```
+git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
 sudo reboot
 ```
+After reboot test SSH and VNC connection, when succesful disconnect display, mouse and keyboard.
 
 # Install Homebridge
+
+Setup APT, enter the following commands:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
 
 Use these commands to install Homebridge:
 
