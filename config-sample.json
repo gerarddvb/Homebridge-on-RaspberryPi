@@ -30,13 +30,6 @@
 
     "platforms": [
                   {
-                  "platform": "PhilipsHue",
-                  "name": "Philips Hue",
-                  "ip_address": "xxxxxxxx",
-                  "username": "xxxxxxxx",
-                  "excludephilips": false
-                  },
-                  {
                   "platform": "HarmonyHub",
                   "name": "HarmonyWoonkamer"
                   },
