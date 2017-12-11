@@ -12,9 +12,10 @@ This example gives the configuration of 4 accessories/devices;
 
 Things I used in this setup;
 - Raspberry Pi 3 Model B v1.2
+- Raspbian Stretch 4.9
 - Keyes Relayboard (2 relays)
 - Phoenix Contact RPI-BC DIN rail housing
-- iPhone/iPad on iOS 11
+- iPhone/iPad on iOS 11.2
 - PC/Mac (For SSH)
 - AppleTV 4 (For remote access)
 
@@ -45,14 +46,6 @@ Pixel uses RealVNC, if you want to use VNC you should enter the following comman
 
 ```
 sudo nano /boot/config.txt
-```
-  
-Uncheck (-#) the following lines:
-
-```
-hdmi_force_hotplug=1
-hdmi_group=2
-hdmi_mode=30
 ```
 
 Add the following line:
@@ -86,18 +79,10 @@ sudo reboot
 Use these commands to install Homebridge:
 
 ```
-cd /home/pi/HomeKit/
-sudo tar -xvf node-v4.3.2-linux-armv6l.tar.gz 
-cd node-v4.3.2-linux-armv6l
-sudo cp -R * /usr/local/
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -  
-sudo apt-get install -y nodejs
 sudo apt-get install libavahi-compat-libdnssd-dev
-sudo npm install -g --unsafe-perm homebridge hap-nodejs node-gyp
-cd /usr/local/lib/node_modules/homebridge/
-sudo npm install --unsafe-perm bignum
-cd /usr/local/lib/node_modules/hap-nodejs/node_modules/mdns
-sudo node-gyp BUILDTYPE=Release rebuild
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo npm install -g --unsafe-perm homebridge
 ```
 
 Use these commands to install the Homebridge plugins.
@@ -142,11 +127,14 @@ Add the following line at the end:
 
 Enter the following commands to setup webiopi:
 ```
-cd /home/pi/HomeKit/
-sudo tar xvzf WebIOPi-0.7.1PATCHED.tar.gz
+cd /home/pi/HomeKit
+sudo wget http://sourceforge.net/projects/webiopi/files/WebIOPi-0.7.1.tar.gz
+sudo tar xvzf WebIOPi-0.7.1.tar.gz
 cd WebIOPi-0.7.1
-sudo ./setup.sh                         (Access over internet = no)
-sudo webiopi -d -c /etc/webiopi/config  (Test, close after successful connection)
+sudo wget https://raw.githubusercontent.com/doublebind/raspi/master/webiopi-pi2bplus.patch
+patch -p1 -i webiopi-pi2bplus.patch
+sudo ./setup.sh
+sudo webiopi -d -c /etc/webiopi/config 		(Test, close after successful connection)
 sudo update-rc.d webiopi defaults
 sudo /etc/init.d/webiopi start
 ```
@@ -189,7 +177,7 @@ sudo reboot
 
 Test watchdog
 
-To test the watchdog enter the following command, this will freeze your Rapsberry Pi, it should reboot after 14 seconds.
+To test the watchdog enter the following command, this will freeze your Rapsberry Pi, it should reboot after 15 seconds.
 
 ```
 :(){ :|:& };:
@@ -213,7 +201,7 @@ http://RASPBERRYIPADDRESS:8000/
 
 # Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
-* The system will restart after 14 seconds of inactivity
+* The system will restart after 15 seconds of inactivity
 * Raspberry Pi inputs crashes Homebridge on my setup if you set the config.json to "switchHandling": "realtime”, if you don’t need inputs/state info you should set "switchHandling": “yes”
 * Install packages manually with: sudo npm install -g FOLDERNAME
 
