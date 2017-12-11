@@ -12,7 +12,7 @@ This example gives the configuration of 4 accessories/devices;
 
 Things I used in this setup;
 - Raspberry Pi 3 Model B v1.2
-- Raspbian Stretch 4.9
+- Raspbian Stretch 4.9 with Desktop
 - Keyes Relayboard (2 relays)
 - Phoenix Contact RPI-BC DIN rail housing
 - iPhone/iPad on iOS 11.2
