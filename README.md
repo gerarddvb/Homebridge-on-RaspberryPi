@@ -132,9 +132,6 @@ sudo /etc/init.d/webiopi start
 
 After all the accessories/devices are configured and tested, it is time to make it run at boot.
 
-Make sure everything is tested thoroughly, because editing the config.json isn't easy after this point.
-Editing will probably break your Raspberry setup, making you start over.
-
 The config.json used by the deamon will be located at /var/homebridge/
 ```
 useradd --system homebridge
