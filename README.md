@@ -21,8 +21,17 @@ Things I used in this setup;
 
 Useful iOS Apps;
 - Home (Expensive but better than default iOS app)
-- Prompt (SSH Terminal)
-- Eve (For editing Siri commands)
+- Prompt
+- iTeleport
+- Eve (Edit Siri commands)
+
+Useful Mac Apps;
+
+- ApplePi-Baker
+- Apple Screen Sharing
+- Terminal
+- Transmit
+
 
 <img src="http://i.imgur.com/CnYg1Oa.png" width="811" height="359">
 
@@ -42,7 +51,6 @@ sudo raspi-config
 
 In the configuration tool enable SSH, VNC, Autologin and change your password.
 
-
 Setup APT, enter the following commands:
 
 ```
@@ -55,6 +63,14 @@ Now download the setup files, enter the following command:
 ```
 git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
 ```
+
+Open VNC Server settings from the system tray.
+Options > Security
+
+Encryption = Prefer On
+Authentication = VNC Password
+
+Apple Screen Sharing and iTeleport should be working now.
 
 After these modifications it is time to reboot, enter the following command to reboot:
 
