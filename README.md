@@ -66,7 +66,7 @@ Download the setup files, enter the following command:
 git clone https://github.com/gerarddvb/Homebridge-on-RaspberryPi /home/pi/HomeKit/
 sudo reboot
 ```
-After reboot test SSH and VNC connection, when succesful disconnect display, mouse and keyboard.
+After reboot test SSH and VNC connection, when succesful, disconnect display, mouse and keyboard.
 
 # Install Homebridge
 
@@ -164,7 +164,7 @@ sudo reboot
 
 # Setup CPU Watchdog
 
-To enable the CPU watchdog enter the following commands, this will reboot the Raspberry Pi after a CPU inactivity of 14 seconds.
+To enable the CPU watchdog enter the following commands, this will reboot the Raspberry Pi after a CPU inactivity of 15 seconds.
 
 ```
 sudo nano /boot/config.txt
