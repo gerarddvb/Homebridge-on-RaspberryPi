@@ -42,24 +42,12 @@ sudo raspi-config
 
 In the configuration tool enable SSH, VNC, Autologin and change your password.
 
-Pixel uses RealVNC, if you want to use VNC you should enter the following command:
-
-```
-sudo nano /boot/config.txt
-```
-
-Add the following line:
-
-```
-dtparam=watchdog=on
-```
 
 Setup APT, enter the following commands:
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install watchdog
 ```
 
 Now download the setup files, enter the following command:
@@ -124,6 +112,7 @@ Add the following line at the end:
 ```
 @reboot sudo python3 /home/pi/HomeKit/gpio.py > /home/pi/HomeKit/webiopilog.txt
 ```
+Save changes with CTRL-X
 
 Enter the following commands to setup webiopi:
 ```
@@ -168,6 +157,21 @@ sudo reboot
 To enable the CPU watchdog enter the following commands, this will reboot the Raspberry Pi after a CPU inactivity of 14 seconds.
 
 ```
+sudo nano /boot/config.txt
+```
+
+Add the following line:
+
+```
+dtparam=watchdog=on
+```
+Save changes with CTRL-X
+
+
+Enter the following commands
+
+```
+sudo apt-get install watchdog
 sudo mv /home/pi/HomeKit/watchdog.conf /etc/
 sudo mv /home/pi/HomeKit/watchdog.service /lib/systemd/system/
 sudo systemctl enable watchdog
