@@ -9,7 +9,7 @@
     "accessories": [
                     {
                     "accessory": "Http",
-                    "name": "GPIO OUTPUTP EXAMPLE NAME",
+                    "name": "GPIO OUTPUT EXAMPLE NAME",
                     "service": "Fan",
                     "switchHandling": "yes",
                     "http_method": "POST",
@@ -19,7 +19,7 @@
                     "username" : "xxxxxxxx",
                     "password" : "xxxxxxxx"
                     },
-                           {
+                    {
                     "accessory": "Http",
                     "name": "GPIO INPUT EXAMPLE NAME",
                     "service": "Motion",
