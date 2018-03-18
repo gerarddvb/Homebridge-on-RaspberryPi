@@ -9,7 +9,7 @@
     "accessories": [
                     {
                     "accessory": "Http",
-                    "name": "Afzuiging",
+                    "name": "GPIO OUTPUTP EXAMPLE NAME",
                     "service": "Fan",
                     "switchHandling": "yes",
                     "http_method": "POST",
@@ -17,6 +17,18 @@
                     "off_url":     "http://localhost:8000/GPIO/4/value/0",
                     "status_url":  "http://localhost:8000/GPIO/4/value",
                     "username" : "xxxxxxxx",
+                    "password" : "xxxxxxxx"
+                    },
+                           {
+                    "accessory": "Http",
+                    "name": "GPIO INPUT EXAMPLE NAME",
+                    "service": "Motion",
+                    "switchHandling": "realtime",
+                    "http_method": "GET",
+                    "on_url":      "http://localhost/GPIO/22/value/1",
+                    "off_url":     "http://localhost/GPIO/22/value/0",
+                    "status_url":  "http://localhost/GPIO/22/value",
+                    "username" : "webiopi",
                     "password" : "xxxxxxxx"
                     }
                     ],
