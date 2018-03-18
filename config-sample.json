@@ -10,6 +10,7 @@
                     {
                     "accessory": "Http",
                     "name": "Afzuiging",
+                    "service": "Fan",
                     "switchHandling": "yes",
                     "http_method": "POST",
                     "on_url":      "http://localhost:8000/GPIO/4/value/1",
@@ -17,11 +18,6 @@
                     "status_url":  "http://localhost:8000/GPIO/4/value",
                     "username" : "xxxxxxxx",
                     "password" : "xxxxxxxx"
-                    },
-                    {
-                    "accessory": "OpenweathermapTemperature",
-                    "name": "Buitentemperatuur",
-                    "url": "xxxxxxxx"
                     }
                     ],
 
@@ -38,8 +34,13 @@
                   "code": "xxxxxxxx",
                   "username" : "xxxxxxxx",
                   "password" : "xxxxxxxx"
+                  },
+                  {
+                  "platform": "WS",
+                  "name": "Temperatuur",
+                  "apikey": "xxxxxxxx"",
+                  "station": "xxxxxxxx"
                   }
-
-                    ]
+                  ]
 
 }
