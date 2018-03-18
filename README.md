@@ -219,7 +219,6 @@ http://RASPBERRYIPADDRESS:8000/
 # Notes
 * The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
 * The system will restart after 15 seconds of inactivity
-* Raspberry Pi inputs crashes Homebridge on my setup if you set the config.json to "switchHandling": "realtime”, if you don’t need inputs/state info you should set "switchHandling": “yes”
 * Install packages manually with: sudo npm install -g FOLDERNAME
 
 # Sources
@@ -232,8 +231,6 @@ http://RASPBERRYIPADDRESS:8000/
 > https://github.com/gerarddvb/homebridge-http
 
 > https://github.com/kraigm/homebridge-nest
-
-> https://github.com/thkl/homebridge-philipshue
 
 > https://github.com/KraigM/homebridge-harmonyhub
 
