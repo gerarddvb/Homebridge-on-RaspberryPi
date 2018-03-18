@@ -4,7 +4,7 @@ Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
-This example gives the configuration of 4 accessories/devices; 
+This example gives the configuration of these accessories/devices; 
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
 - Raspberry Pi GPIO
@@ -146,6 +146,8 @@ sudo /etc/init.d/webiopi start
 
 After all the accessories/devices are configured and tested, it is time to make it run at boot.
 
+Enter the following commands to enable homebridge to run at boot and restart after 10 seconds of inactivity.
+
 The config.json used by the deamon will be located at /var/homebridge/
 ```
 useradd --system homebridge
@@ -225,8 +227,6 @@ http://RASPBERRYIPADDRESS:8000/
 
 > https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
 
-> https://gist.github.com/johannrichard/0ad0de1feb6adb9eb61a
-
 > https://github.com/rudders/homebridge-http
 
 > https://github.com/gerarddvb/homebridge-http
@@ -242,6 +242,10 @@ http://RASPBERRYIPADDRESS:8000/
 > http://webiopi.trouch.com/INSTALL.html
 
 > http://forkgeeks.com/enabling-watchdog-on-raspberry-pi/
+
+> https://gist.github.com/johannrichard/0ad0de1feb6adb9eb61a
+
+> https://github.com/KhaosT/HAP-NodeJS/blob/master/lib/gen/HomeKitTypes.js
 
 # DIN 81346 Electrical Drawing
 
