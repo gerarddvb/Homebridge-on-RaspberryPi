@@ -229,13 +229,15 @@ http://RASPBERRYIPADDRESS:8000/
 
 > https://github.com/rudders/homebridge-http
 
+> https://github.com/gerarddvb/homebridge-http
+
 > https://github.com/kraigm/homebridge-nest
 
 > https://github.com/thkl/homebridge-philipshue
 
 > https://github.com/KraigM/homebridge-harmonyhub
 
-> https://github.com/sholzmayer/homebridge-openweathermap-temperature
+> https://github.com/ebaauw/homebridge-ws
 
 > http://webiopi.trouch.com/INSTALL.html
 
