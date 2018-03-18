@@ -8,14 +8,14 @@ This example gives the configuration of 4 accessories/devices;
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
 - Raspberry Pi GPIO
-- GPS based temperature sensor
+- GPS based temperature & humidity sensor
 
 Things I used in this setup;
 - Raspberry Pi 3 Model B v1.2
 - Raspbian Stretch 4.9 with Desktop
 - Keyes Relayboard (2 relays)
 - Phoenix Contact RPI-BC DIN rail housing
-- iPhone/iPad on iOS 11.2
+- iPhone/iPad on iOS 11.3
 - PC/Mac (For SSH)
 - AppleTV 4 (For remote access)
 
@@ -92,10 +92,11 @@ Initial setup of various plugins is nedeed.
 Follow the instructions on the GitHub link to the plugin below.
 
 ```
-sudo npm install -g homebridge-http
 sudo npm install -g homebridge-nest
 sudo npm install -g homebridge-harmonyhub
-sudo npm install -g homebridge-openweathermap-temperature
+sudo npm install -g homebridge-ws
+git clone https://github.com/gerarddvb/homebridge-http /home/pi/HomeKit/http/
+sudo npm install -g /home/pi/HomeKit/http/
 ```
 
 Test Homebridge
