@@ -27,7 +27,7 @@ Useful iOS Apps;
 
 Useful Mac Apps;
 
-- ApplePi-Baker
+- Etcher
 - Apple Screen Sharing
 - Terminal
 - Transmit
@@ -81,8 +81,8 @@ Use these commands to install Homebridge:
 
 ```
 sudo apt-get install libavahi-compat-libdnssd-dev
-sudo apt-get install nodejs
-sudo apt-get install npm
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 sudo npm install -g --unsafe-perm homebridge
 ```
 
@@ -92,11 +92,12 @@ Initial setup of various plugins is nedeed.
 Follow the instructions on the GitHub link to the plugin below.
 
 ```
-sudo npm install -g homebridge-nest
-sudo npm install -g homebridge-harmonyhub
+sudo npm install -g homebridge-http
 sudo npm install -g homebridge-ws
-git clone https://github.com/gerarddvb/homebridge-http /home/pi/HomeKit/http/
-sudo npm install -g /home/pi/HomeKit/http/
+sudo npm install -g homebridge-nest
+
+sudo npm install -g npm@4
+sudo npm install -g homebridge-harmonyhub@0.3.0-alpha.2
 ```
 
 Test Homebridge
@@ -150,7 +151,7 @@ Enter the following commands to enable homebridge to run at boot and restart aft
 
 The config.json used by the deamon will be located at /var/homebridge/
 ```
-useradd --system homebridge
+sudo useradd --system homebridge
 sudo mv /home/pi/HomeKit/homebridge /etc/default/
 sudo mv /home/pi/HomeKit/homebridge.service /etc/systemd/system/ 
 sudo mkdir /var/homebridge
@@ -225,6 +226,8 @@ http://RASPBERRYIPADDRESS:8000/
 > https://github.com/nfarina/homebridge
 
 > https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi
+
+> https://nodejs.org/en/download/package-manager/
 
 > https://github.com/rudders/homebridge-http
 
