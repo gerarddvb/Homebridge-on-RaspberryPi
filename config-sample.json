@@ -10,7 +10,6 @@
                     {
                     "accessory": "Http",
                     "name": "GPIO OUTPUT EXAMPLE NAME",
-                    "service": "Fan",
                     "switchHandling": "yes",
                     "http_method": "POST",
                     "on_url":      "http://localhost:8000/GPIO/4/value/1",
@@ -22,7 +21,6 @@
                     {
                     "accessory": "Http",
                     "name": "GPIO INPUT EXAMPLE NAME",
-                    "service": "Motion",
                     "switchHandling": "realtime",
                     "http_method": "GET",
                     "on_url":      "http://localhost/GPIO/22/value/1",
@@ -43,6 +41,7 @@
                   "token" : "xxxxxxxx",
                   "clientId": "xxxxxxxx",
                   "clientSecret": "xxxxxxxx",
+                  "disable": "Thermostat.Eco",
                   "code": "xxxxxxxx",
                   "username" : "xxxxxxxx",
                   "password" : "xxxxxxxx"
