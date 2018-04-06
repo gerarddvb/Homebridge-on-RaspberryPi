@@ -174,10 +174,24 @@ To enable the CPU watchdog enter the following commands, this will reboot the Ra
 sudo nano /boot/config.txt
 ```
 
-Add the following line:
+Add the following lines:
 
 ```
+# Watchdog enable
 dtparam=watchdog=on
+
+# VNC resolution enable
+hdmi_group=2
+hdmi_force_hotplug=1
+
+# VNC resolution
+# 2=640x400
+# 27=1280x800
+# 46=1440x900
+# 76=2560x1600
+# 82=1080p
+# 85=720p
+hdmi_mode=46
 ```
 Save changes with CTRL-X
 
