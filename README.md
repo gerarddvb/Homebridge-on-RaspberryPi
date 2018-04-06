@@ -259,6 +259,8 @@ http://RASPBERRYIPADDRESS:8000/
 
 > https://gist.github.com/johannrichard/0ad0de1feb6adb9eb61a
 
+> https://elinux.org/RPiconfig#Video_mode_options
+
 > https://github.com/KhaosT/HAP-NodeJS/blob/master/lib/gen/HomeKitTypes.js
 
 # DIN 81346 Electrical Drawing
