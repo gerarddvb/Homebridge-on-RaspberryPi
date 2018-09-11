@@ -1,0 +1,13 @@
+[Unit]
+Description=HAP Camera RPi
+
+[Service]
+ExecStart=/usr/bin/node /opt/homebridge-camera-rpi/standalone.js -c /etc/homebridge-camera-rpi.conf.json
+WorkingDirectory=/opt/homebridge-camera-rpi
+Restart=always
+RestartSec=10
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
