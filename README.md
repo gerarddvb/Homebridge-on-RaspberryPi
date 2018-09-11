@@ -38,9 +38,6 @@ Useful Mac Apps;
 - Terminal
 - Transmit
 
-
-<img src="http://i.imgur.com/CnYg1Oa.png" width="811" height="359">
-
 <img src="http://i.imgur.com/F0AorQ8.jpg" width="400" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
 
 <img src="http://i.imgur.com/c1DaqGE.jpg" width="400" height="300"> <img src="http://i.imgur.com/1XWtP4z.jpg" width="400" height="300"> 
