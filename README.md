@@ -14,8 +14,8 @@ This example gives the configuration of these accessories/devices;
 - GPS Temperature & humidity sensor
 
 Things I used in this setup;
-- Raspberry Pi 3 Model B v1.2
-- Raspbian Stretch 4.9 with Desktop
+- Raspberry Pi 3 Model B+
+- Raspbian Stretch with Desktop
 - Raspberry Pi Camera Module V2
 - Keyes Relayboard (2 relays)
 - Makeblock MQ2 Gas Sensor
@@ -35,7 +35,7 @@ Useful Mac Apps;
 
 - Etcher
 - Apple Screen Sharing
-- Terminal
+- Termius
 - Transmit
 
 <img src="http://i.imgur.com/F0AorQ8.jpg" width="400" height="300"> <img src="http://i.imgur.com/sTtJVN8.jpg" width="400" height="300">
@@ -223,7 +223,7 @@ To test the watchdog enter the following command, this will freeze your Rapsberr
 Use these commands to install the Raspberry Pi Camera Module.
 
 ```
-raspi-config 				      Enable Camera
+raspi-config 				 Enable Camera
 sudo nano /etc/modules		Add: bcm2835-v4l2
 sudo reboot 
 raspistill -o cam.jpg
