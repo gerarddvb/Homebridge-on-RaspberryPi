@@ -10,7 +10,7 @@ This example gives the configuration of these accessories/devices;
 - Camera
 - Fan
 - Smoke Detector
-- Motion detector
+- Motion Detector
 - GPS Temperature & humidity sensor
 
 Things I used in this setup;
