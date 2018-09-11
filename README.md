@@ -7,13 +7,19 @@ Example of Homebridge on RaspberryPi 3
 This example gives the configuration of these accessories/devices; 
 - Nest thermostat (3rd gen)
 - Logitech Harmony Hub
-- Raspberry Pi GPIO
-- GPS based temperature & humidity sensor
+- Camera
+- Fan
+- Smoke Detector
+- Motion detector
+- GPS Temperature & humidity sensor
 
 Things I used in this setup;
 - Raspberry Pi 3 Model B v1.2
 - Raspbian Stretch 4.9 with Desktop
+- Raspberry Pi Camera Module V2
 - Keyes Relayboard (2 relays)
+- Makeblock MQ2 Gas Sensor
+- HC-SR501 PIR Motion Sensor
 - Phoenix Contact RPI-BC DIN rail housing
 - iPhone/iPad on iOS 11.3
 - PC/Mac (For SSH)
@@ -215,12 +221,38 @@ To test the watchdog enter the following command, this will freeze your Rapsberr
 :(){ :|:& };:
 ```
 
+# Setup Raspberry Pi Camera Module
+
+Use these commands to install the Raspberry Pi Camera Module.
+
+```
+raspi-config 				      Enable Camera
+sudo nano /etc/modules		Add: bcm2835-v4l2
+sudo reboot 
+raspistill -o cam.jpg
+sudo apt install ffmpeg
+cd /opt
+sudo mkdir homebridge-camera-rpi
+sudo chown pi homebridge-camera-rpi
+git clone https://github.com/moritzmhmk/homebridge-camera-rpi
+cd homebridge-camera-rpi
+npm install
+node standalone.js
+sudo mv /home/pi/HomeKit/homebridge-camera-rpi.conf.json /etc/
+sudo mv /home/pi/HomeKit/hap-camera-rpi.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable hap-camera-rpi
+sudo systemctl start hap-camera-rpi
+sudo reboot
+```
+
 # Status
 
 You can check the state of homebridge by entering the following command:
 
 ```
 sudo systemctl status -l homebridge -n 200
+sudo systemctl status -l hap-camera-rpi -n 200
 ```
 
 This will output the last 200 lines, change that number to get more/less info
@@ -232,7 +264,7 @@ http://RASPBERRYIPADDRESS:8000/
 ```
 
 # Notes
-* The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with kill -s SIGSEGV <pid>)
+* The service will restart after 10 seconds if it fails for any reason (or if you kill it for example with 'sudo systemctl stop homebridge')
 * The system will restart after 15 seconds of inactivity
 * Install packages manually with: sudo npm install -g FOLDERNAME
 
@@ -252,6 +284,8 @@ http://RASPBERRYIPADDRESS:8000/
 > https://github.com/KraigM/homebridge-harmonyhub
 
 > https://github.com/ebaauw/homebridge-ws
+
+> https://github.com/moritzmhmk/homebridge-camera-rpi
 
 > http://webiopi.trouch.com/INSTALL.html
 
