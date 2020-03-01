@@ -1,6 +1,19 @@
-# Homebridge on Raspberry Pi 3
+# This repo is outdated and is not maintained anymore.
+# For better and cheaper devices see https://github.com/RavenSystem/esp-homekit-devices/wiki/Home-Accessory-Architect
+# For better RPI camera see https://github.com/brutella/hkcam
+# This repo will continue at https://github.com/gerarddvb/Homebridge-HKCam-om-Pi-Zero-W/tree/master
 
-Example of Homebridge on RaspberryPi 3
+
+
+
+
+
+
+
+
+# [OUTDATED] Homebridge on Raspberry Pi 3
+
+[OUTDATED] Example of Homebridge on RaspberryPi 3
 
 ## READ: https://github.com/nfarina/homebridge
 
