@@ -1,6 +1,7 @@
 # This repo is outdated and is not maintained anymore.
-# For better and cheaper devices see https://github.com/RavenSystem/esp-homekit-devices/wiki/Home-Accessory-Architect
-# For better RPI camera see https://github.com/brutella/hkcam
+# Go here: https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Raspbian
+# For better and cheaper devices see: https://github.com/RavenSystem/esp-homekit-devices/wiki/Home-Accessory-Architect
+# For better RPI camera see: https://github.com/brutella/hkcam
 
 
 
