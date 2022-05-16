@@ -1,7 +1,6 @@
 # This repo is outdated and is not maintained anymore.
 # For better and cheaper devices see https://github.com/RavenSystem/esp-homekit-devices/wiki/Home-Accessory-Architect
 # For better RPI camera see https://github.com/brutella/hkcam
-# This repo will continue at https://github.com/gerarddvb/Homebridge-HKCam-om-Pi-Zero-W/tree/master
 
 
 
